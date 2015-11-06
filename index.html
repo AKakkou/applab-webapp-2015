@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> カブドラ</title>
+	<link rel="stylesheet" href="style2.css">
+	<link rel="stylesheet" href="hamburger_menu.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.js"></script>
+</head>
+
+<body>
+<!-- ヘッダー -->
+<header id="header">
+	<div id="header_inner">
+	<h1>カブドラ</h1>
+	</div>
+	<!-- <div id="header_menu">
+		<div class="navBtn">
+			<button class="navIcon">
+			<span class="iconLayer"></span></button>
+		/.navBtn
+		</div>
+		<div class="menu menuOff">
+			<ul>
+			<li><a href="#">メニュー1</a></li>
+			<li><a href="#">メニュー2</a></li>
+			<li><a href="#">メニュー3</a></li>
+			<li><a href="#">メニュー4</a></li>
+			<li><a href="#">メニュー5</a></li>
+			<li><a href="#">メニュー6</a></li>
+			</ul>
+		 / .menu menuOff
+		</div>
+	</div> -->
+</header>
+
+<!-- メイン画像 -->
+<div class="container">
+	<div class="background">
+		<p class="img"><img src="800x450_image.png" width="800" height="450" alt"メイン画像"></p>
+	<!-- </div>
+	<div class="inner_text"> -->
+		<b><pre>
+		お気に入り選手を見つけて
+		投資しよう！
+		</pre>
+		</b>
+	</div>
+</div>
+
+<!-- ここから中央寄せ -->
+<center>
+<div class="twitter_login">
+	<b>Twitterでログイン</b>
+</div>
+<div class="fb_login">
+	<b>Facebookでログイン</b>
+</div>
+
+<b><p style="font-size:2.5em; color: #808080;">人気急上昇！パリーグ推しメン！</p></b>
+
+
+
+</center>
+<!-- ここまで中央寄せ -->
+
+
+
+
+
+<!-- 
+<div class="inline_block">
+    <span></span>
+    <p>p tag p tag p tag p tag p tag p tag</p>
+</div>
+
+<div class="inline_block">
+    <span></span>
+    <div>
+        <h1>H1 text</h1>
+        <p>p tag p tag p tag p tag p tag p tag</p>
+        <a href="">LINK</a>
+    </div>
+</div>
+<div class="inline_block">
+    <span></span>
+    <img src="images/img.png" alt="">
+</div> -->
+
+
+<script>
+	console.log("headroom")
+	// grab an element
+	var myElement = document.getElementById("header");
+	// construct an instance of Headroom, passing the element
+	var headroom  = new Headroom(myElement);
+	// initialise
+	headroom.init();
+</script>
+
+
+
+</body>
+</html>
