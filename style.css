@@ -6,15 +6,16 @@ body {
 }
 
 #header{
-	position: absolute;
+	position: fixed;
 	top: 0;
+	right: 0;
 	left: 0;
 	width: 100%;
 	height: 100px;
 	background-color: rgba(250,150,40,0.8);
 	/*背景のみのため*/
 	/*opacity: 0.8;*/
-	z-index: 9999;
+	z-index: 10;
 }
 
 #header_inner{
@@ -31,6 +32,48 @@ body {
 
 }
 
+/*headroom*/
+.header-animated {
+	-webkit-animation-duration: .5s;
+	-moz-animation-duration: .5s;
+	-o-animation-duration: .5s;
+	animation-duration: .5s;
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+.header-animated.slideUp {
+	-webkit-animation-name: slideUp;
+	-moz-animation-name: slideUp;
+	-o-animation-name: slideUp;
+	animation-name: slideUp
+}
+@-webkit-keyframes slideUp {
+	0% {
+	-webkit-transform: translateY(0)
+	}
+	/*スライドアップで隠す領域*/
+	100% {
+	-webkit-transform: translateY(-100%)
+	}
+}
+.animated.slideDown {
+	-webkit-animation-name: slideDown;
+	-moz-animation-name: slideDown;
+	-o-animation-name: slideDown;
+	animation-name: slideDown
+}
+@-webkit-keyframes slideDown {
+	/*スライドダウンで隠す領域*/
+	0% {
+	-webkit-transform: translateY(-100%)
+	}
+
+	100% {
+	-webkit-transform: translateY(0)
+	}
+}
 
 
 /*メイン画像*/

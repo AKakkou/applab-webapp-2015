@@ -5,26 +5,26 @@
 	<title> カブドラ</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="hamburger_menu.css">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.js"></script>
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/snap.js/1.9.3/snap.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.js/1.9.3/snap.js"></script>
+	-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/jQuery.headroom.min.js"></script>
+	<script src="jq_script.js"></script>
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/snap.js/1.9.3/snap.css">
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.js/1.9.3/snap.js"></script>
+</head>
 
- 	<script src="jq_script.js"></script>
 <body>
 <!-- ヘッダー -->
-<header id="header">
+<header id="header" class="header-animated">
 	<div id="header_inner">
 	<h1>カブドラ</h1>
 	</div>
-	<div id="header_menu">
+	<!-- <div id="header_menu">
 		<div class="navBtn">
 			<button class="navIcon">
 			<span class="iconLayer"></span></button>
-		<!-- /.navBtn -->
 		</div>
 		<div class="menu menuOff">
 			<ul>
@@ -35,9 +35,8 @@
 			<li><a href="#">メニュー5</a></li>
 			<li><a href="#">メニュー6</a></li>
 			</ul>
-		 <!-- / .menu menuOff -->
 		</div>
-	</div>
+	</div> -->
 </header>
 
 <!-- メイン画像 -->
@@ -65,21 +64,24 @@
 
 <b><p style="font-size:2.5em; color: #808080;">人気急上昇！パリーグ推しメン！</p></b>
 
-
-
 </center>
 <!-- ここまで中央寄せ -->
 
 
-
-<script>
-	console.log("headroom")
-	// grab an element
-	var myElement = document.getElementById("header");
-	// construct an instance of Headroom, passing the element
-	var headroom  = new Headroom(myElement);
-	// initialise
-	headroom.init();
+<script type="text/javascript">
+	$(function() {
+	$("header").headroom({
+	"tolerance": 7,
+	"offset": 205,
+	"classes": {
+	"initial": "animated",
+	"pinned": "slideDown",
+	"unpinned": "slideUp",
+	"top": "headroom--top",
+	"notTop": "headroom--not-top"
+	}
+	});
+	});
 </script>
 
 
