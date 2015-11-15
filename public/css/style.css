@@ -5,7 +5,11 @@ body {
 	margin: 0;
 }
 
+/*
+ヘッダー
+*/
 #header{
+	/*position: absolute;だとheadroomjsが動かない*/
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -13,25 +17,21 @@ body {
 	width: 100%;
 	height: 100px;
 	background-color: rgba(250,150,40,0.8);
-	/*背景のみのため*/
+	/*背景のみのため
 	/*opacity: 0.8;*/
 	z-index: 10;
 }
-
 #header_inner{
 	padding: 0;
 	margin: 0;
 }
-
 #header h1{
 	padding-top: 0;
 	margin-left: 30px;
 	font-size: 2.3em;
 	font-family: Helvetica;
 	color: #fffafa;
-
 }
-
 /*headroom*/
 .header-animated {
 	-webkit-animation-duration: .5s;
@@ -75,32 +75,37 @@ body {
 	}
 }
 
-
-/*メイン画像*/
-.container{
+/*
+メイン画像
+*/
+#top-table .top-background{
 	position: relative;
-	text-align: center;
-}
-
-.img{
-	margin: 0;
-}
-
-.background {
-	/*position: center;*/
-	width: 100%;
+	width: 1000px;
 	height: 450px;
+	margin: 0 auto;
 }
-
-.inner_text {
+.top-background .top-image .top-text{
 	position: absolute;
+	display:block;
+}
+.top-image{
+	margin: 0 100px 0 100px;
+}
+.top-text{
+	position: absolute;
+	margin: 0;
 	top: 160px;
-	left: 0px;
+	left: 100px;
 	font-size: 3em;
 	color: #fffafa;
 	font-family: Helvetica;
+	/*中央寄せ*/
+	text-align: center;
 }
 
+/*
+ソーシャルログイン
+*/
 .twitter_login{
 	padding-top: 10px;
 	margin-top: 50px;
@@ -112,7 +117,6 @@ body {
 /*ソーシャルログインの画像を角丸にする*/
 	border-radius: 15px;
 }
-
 .fb_login{
 	padding-top: 10px;
 	margin-top: 20px;
@@ -125,53 +129,28 @@ body {
 	border-radius: 15px;
 }
 
-
-
-
-
-
+.main-text{
+	font-size:2.5em;
+	color: #808080;
+}
 
 .inline_block{
-    width: 300px;
-    height: 300px;
-    background: #ccc;
-    display: block;
-    text-align: center;
+	width: 300px;
+	height: 300px;
+	background: #ccc;
+	display: block;
+	text-align: center;
 }
 .inline_block > *{
-    vertical-align: middle;
-    display: inline-block;
-    zoom: 1; /* Fix for IE7 */
-    *display: inline; /* Fix for IE7 */
+	vertical-align: middle;
+	display: inline-block;
+	zoom: 1;  Fix for IE7
+	display: inline;  Fix for IE7*/
 }
 .inline_block span {
-    height: 100%;
-    width: 0px;
-    display: inline-block;
-    zoom: 1; /* Fix for IE7 */
-    *display: inline; /* Fix for IE7 */
+	height: 100%;
+	width: 0px;
+	display: inline-block;
+	zoom: 1;  /*Fix for IE7*/
+	display: inline;  /*Fix for IE7 */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

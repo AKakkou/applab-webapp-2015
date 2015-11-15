@@ -1,14 +1,30 @@
 $(function(){
     // ===============================
+    // Headroom動作関係
+    // ===============================
+    $("header").headroom({
+    "tolerance": 7,
+    "offset": 205,
+    "classes": {
+    "initial": "animated",
+    "pinned": "slideDown",
+    "unpinned": "slideUp",
+    "top": "headroom--top",
+    "notTop": "headroom--not-top"
+    }
+    });
+
+// 以下サイト引用部
+    // ===============================
     // ハンバーガーアイコン動作関係
     // ===============================
- 
+
     // ナビアイコンをクリックしたら
     $('.navIcon').click(function(){
         $('.overlay').toggle(); // オーバーレイ表示切替
         $('.menu').toggleClass('menuOn'); // サイドメニュー表示切替
         $('#wrap').toggleClass('fixed'); // コンテンツ固定
- 
+
         if ($('.iconLayer').hasClass('arrow')) { // アイコンが矢印なら
             $('.iconLayer').removeClass('arrow').addClass('hamburger'); // ハンバーガーメニューに
         } else { // それ以外なら
