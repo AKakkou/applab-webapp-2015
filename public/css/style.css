@@ -111,32 +111,56 @@ body{
 /*
 ソーシャルログイン
 */
-.twitter_login{
+.social-login{
+	position:relative;
+	width: 1000px;
+	height: 200px;
+	margin: 0 auto;
+}
+.twitter-login{
+	/*position: absolute;*/
+	margin: 0 150px 30px 150px;
+	display: block;
 	padding-top: 10px;
 	margin-top: 50px;
 	width: 700px;
 	height: 60px;
-	font-size: 2em;
+	font-size: 30px;
+	font-weight: 600;
 	background-color: rgba(0,172,237,1);
 	color: #fffafa;
 /*ソーシャルログインの画像を角丸にする*/
 	border-radius: 15px;
+	text-align: center;
 }
-.fb_login{
+.fb-login{
+	/*position: absolute;*/
+	margin: 0 150px 30px 150px;
+	display: block;
 	padding-top: 10px;
-	margin-top: 20px;
+	margin-top: 10px;
 	width: 700px;
 	height: 60px;
-	font-size: 2em;
+	font-size: 30px;
+	font-weight: 600;
 	background-color: rgba(30,50,97,1);
 	color: #fffafa;
 /*ソーシャルログインの画像を角丸にする*/
 	border-radius: 15px;
+	text-align: center;
 }
 
+/*
+メインテキスト
+*/
 .main-text{
-	font-size:2.5em;
-	color: #808080;
+	position:relative;
+	width: 1000px;
+	height: 70px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 30px;
+	color: #6F6F6F;
 }
 
 .inline_block{
@@ -164,20 +188,18 @@ body{
 推しメン
 */
 .oshimen{
-	text-align: center;
-	margin: auto;
-	margin-left: auto;
-	margin-right: auto;
+	position:relative;
+	width: 1000px;
+	height: 1000px;
+	margin: 0 auto;
 }
 .white-box{
 	background: white;
 	width: 350px;
-	height: 700px;
 	height: 550px;
 	border-radius: 20px;
 	float: left;
-	margin: 10px;
-	margin-left: 80px;
+	margin: 30px 10px 10px 80px;
 	text-align: center;
 }
 .man-image{
