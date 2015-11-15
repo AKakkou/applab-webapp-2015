@@ -1,46 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title> カブドラ</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/hamburger_menu.css">
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<link type="text/css" rel="stylesheet" href="css/hamburger_menu.css">
 	<!-- スクロールが動かなくなるためコメントアウト -->
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/snap.js/1.9.3/snap.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.js/1.9.3/snap.js"></script>
 	-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/jQuery.headroom.min.js"></script>
-	<script src="js/jq_script.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/jQuery.headroom.min.js"></script>
+	<script type="text/javascript" src="js/jq_script.js"></script>
 </head>
-
 <body>
+
 <!-- ヘッダー -->
 <header id="header" class="header-animated">
 	<div id="header_inner">
-	<h1>カブドラ</h1>
+		<h1>カブドラ</h1>
 	</div>
-	<!-- <div id="header_menu">
-		<div class="navBtn">
-			<button class="navIcon">
-			<span class="iconLayer"></span></button>
-		</div>
-		<div class="menu menuOff">
+	<div id="header-menu">
+		<div id="spNav" class="nav">
+			<div class="wrapper">
 			<ul>
-			<li><a href="#">メニュー1</a></li>
-			<li><a href="#">メニュー2</a></li>
-			<li><a href="#">メニュー3</a></li>
-			<li><a href="#">メニュー4</a></li>
-			<li><a href="#">メニュー5</a></li>
-			<li><a href="#">メニュー6</a></li>
+			<li><a href="#"><span class="navTxt">DUMMY01</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY02</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY03</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY04</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY05</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY06</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY07</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY08</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY09</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY10</span></a></li>
+			<li><a href="#"><span class="navTxt">DUMMY11</span></a></li>
 			</ul>
+			</div><!-- /.wrapper -->
+		</div><!-- / #spNav -->
+		<div id="hamburger"><p class="icn">
+		<!-- 三本線 -->
+		<span></span><span></span><span></span></p>
 		</div>
-	</div> -->
-
+	</div>
 </header>
 
-<!-- メイン画像 -->
+<!-- トップ画像 -->
 <div id="top-table">
 <div class="top-background">
 	<div class="top-image"><img src="img/800x450_image.png" width="800" height="450" alt"トップ画像"></div>
@@ -82,25 +88,6 @@
 
 </center>
 <!-- ここまで中央寄せ -->
-
-
-<script type="text/javascript">
-	$(function() {
-	$("header").headroom({
-	"tolerance": 7,
-	"offset": 205,
-	"classes": {
-	"initial": "animated",
-	"pinned": "slideDown",
-	"unpinned": "slideUp",
-	"top": "headroom--top",
-	"notTop": "headroom--not-top"
-	}
-	});
-	});
-</script>
-
-
 
 </body>
 </html>

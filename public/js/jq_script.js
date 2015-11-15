@@ -1,4 +1,4 @@
-$(function(){
+$(function($){
     // ===============================
     // Headroom動作関係
     // ===============================
@@ -13,62 +13,50 @@ $(function(){
     "notTop": "headroom--not-top"
     }
     });
+});
 
 // 以下サイト引用部
     // ===============================
     // ハンバーガーアイコン動作関係
     // ===============================
+/* spNav */
+$(window).on('load',function(){
+        var conteiner = $('#container');
+        var spNavBt = $('#hamburger');
+        var spNav = $('#spNav');
+        var flag = false;
+        var sdw = $('<div id="spNavSdw"></div>');
+        conteiner.append(sdw);
 
-    // ナビアイコンをクリックしたら
-    $('.navIcon').click(function(){
-        $('.overlay').toggle(); // オーバーレイ表示切替
-        $('.menu').toggleClass('menuOn'); // サイドメニュー表示切替
-        $('#wrap').toggleClass('fixed'); // コンテンツ固定
-
-        if ($('.iconLayer').hasClass('arrow')) { // アイコンが矢印なら
-            $('.iconLayer').removeClass('arrow').addClass('hamburger'); // ハンバーガーメニューに
-        } else { // それ以外なら
-            $('.iconLayer').removeClass('hamburger').addClass("arrow"); // 矢印
-        }
-        return false;
-    });
- 
-    // オーバーレイ作成
-    $('#contents').prepend('<div class="overlay"></div>');
- 
-    // オーバーレイをクリックしたら
-    $('.overlay').click(function(){
-        $(this).fadeOut(300); // オーバーレイ非表示
-        $('.menu').removeClass('menuOn'); // メニュー非表示
-        $('#wrap').removeClass('fixed'); // 固定解除
-        $('.iconLayer').removeClass('arrow').addClass('hamburger'); // ハンバーガーメニューに
-    });
- 
-    // ===============================
-    // メニュー動作関係
-    // ===============================
- 
-    // サイドナビゲーション高さ指定
-    function winHeight() {
-        var winH = $(window).height();
-        var headerH = $('header').height();
-        var winH = winH - headerH; // ヘッダーの高さを引く
-        $('.menu').css({
-            'height': winH + 'px',
-            'top': headerH + 'px'
+        spNavBt.on('touchstart click', function() {
+           if(!flag) {
+               sdw.addClass('show');
+               spNavBt.addClass('on');
+               spNav.addClass('on');
+               conteiner.addClass('on');
+               flag = true;
+           } else {
+               sdw.removeClass('show');
+               spNavBt.removeClass('on');
+               spNav.removeClass('on');
+               conteiner.removeClass('on');
+               flag = false;
+           }
         });
-        $('#contents').css('marginTop', headerH + 30 + 'px');
-    }
-    winHeight();
- 
-    // リサイズしたら再度実行
-    $(window).resize(function(){
-        winHeight();
-    });
-     
-    // サイドメニュー説明文
-    $('.menuHeader figcaption').click(function(){
-        $('.menu .txt').slideToggle();
-    });
- 
+
+        sdw.on('touchstart click', function() {
+           if(flag) {
+               sdw.removeClass('show');
+               spNavBt.removeClass('on');
+               conteiner.removeClass('on');
+               spNav.removeClass('on');
+               flag = false;
+           }
+        });
+
+        conteiner.on('touchmove', function(e) {
+        if(flag) {
+          e.preventDefault();
+        }
+        });
 });
