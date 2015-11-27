@@ -3,9 +3,11 @@ body {
 	height: 100%;
 	padding-top: 0;
 	margin: 0;
+	overflow: scroll-y;
 }
 body{
 	background-color: #F7F7F7;
+	-webkit-text-size-adjust: 100%;
 }
 
 /*
